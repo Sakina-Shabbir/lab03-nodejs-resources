@@ -4,12 +4,12 @@ const session = require('express-session');
 
 //creating app 
 const app = express(); 
-/*//send the index.html when receiving HTTP GET / 
+//send the index.html when receiving HTTP GET / 
 app.use(express.static('public')); 
 app.get('/', (req, res) => { 
     res.sendFile('index.html', { root: __dirname }); 
 });
-*/
+
 
 app.use(session({secret: 'some secret code'}));
 
@@ -36,10 +36,12 @@ app.get('/contacts', (req, res) => {
     res.render('contacts'); 
 });
 
+//route for register
 app.get('/register', (req, res) => { 
     res.render('register'); 
 });
 
+//route for login 
 app.get('/login', (req, res) => { 
     res.render('login'); 
 });

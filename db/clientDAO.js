@@ -82,7 +82,6 @@ function findByNumclient(num_client, callback) {
     });
 }
 
-
 module.exports = {
     find,
     findByUsername,
